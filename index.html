@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Guess the Number 🎮</title>
+</head>
+<body>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+
+  <main class="card" role="main" aria-labelledby="game-title">
+    <h1 id="game-title">Guess the Number 🎮</h1>
+    <br>
+    <p class="subtitle">
+      Hey...hey! I'm thinking of a secret number between <b>1</b> and <b>100</b> 👀  
+      Think you can crack it?
+    </p>
+
+    <form id="guess-form" class="row" autocomplete="off">
+      <label for="guess" class="visually-hidden">Take your shot</label>
+      <input id="guess" name="guess" type="number" min="1" max="100" placeholder="Make your guess buddy.." required autofocus />
+      <button id="submit" type="submit">🔥 Guess!</button>
+      <button id="reset" type="button" class="ghost" title="Start a new round">🔄 Restart</button>
+    </form>
+
+    <div id="status" class="status" aria-live="polite"></div>
+    <div id="hint" class="hint" aria-live="polite"></div>
+
+    <div class="stats">
+      <span id="attempts" class="badge" title="Number of guesses so far">🔥 Tries: 0</span>
+      <span id="range" class="badge" title="Current search range">🤔 Range: 1–100</span>
+    </div>
+
+    <footer>
+      <p>💡 Pro tip: Just hit <b><i>Enter</i></b> to lock in your guess!</p>
+    </footer>
+  </main>
+</body>
+</html>
