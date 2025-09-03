@@ -40,7 +40,7 @@ guessForm.addEventListener("submit", function (e) {
 
   if (guess === secretNumber) {
     statusDiv.textContent = `Booyah 🎉 Correct Buddy! The number was ${secretNumber}. but....but you won in ${attempts} attempts!`;
-    hintDiv.textContent = "Click reset to play again 🔄";
+    hintDiv.textContent = "Click restart to play again 🔄";
   } else if (guess < secretNumber) {
     statusDiv.textContent = "📉 Naah your guess was too low means it was less than the actual number";
     minRange = Math.max(minRange, guess + 1);
